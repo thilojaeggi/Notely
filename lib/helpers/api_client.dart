@@ -359,10 +359,6 @@ class APIClient {
           .where((grade) => grade.mark != null && grade.mark != 0)
           .toList();
 
-      // Send json to a rest api https://notely.free.beeceptor.com
-      http.post(Uri.parse('https://notely.free.beeceptor.com'),
-          body: jsonEncode(json));
-
       return grades;
     }, cached);
   }
